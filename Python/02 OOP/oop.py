@@ -79,7 +79,7 @@
 #     print("Static method")
 
 
-# ? special methods (__init__,str)
+# ? special methods (__init__,str)//Dunger-Magic methods
 
 #! ============İNİT===========================
 # class Person:
@@ -100,20 +100,43 @@
 
 
 #! ============STR===========================
-class Person:
-    company: "Clarusway"
+# class Person:
+#     company: "Clarusway"
 
-    def __init__(self, name, age=34, gender="Male"):
+#     def __init__(self, name, age=34, gender="Male"):
+#         self.name = name
+#         self.age = age
+#         self.gender = gender
+
+#     def get_details(self):
+#         print(self.name, self.age, self.gender)
+
+#     def __str__(self):
+#         return f"{self.name} - {self.age}"
+
+
+# person1 = Person("Henry", 18)
+# #print(person1.__str__()) #👇
+# print(person1)  # Henry - 18
+
+
+class Person:
+    company = "Clarusway"
+
+    def __init__(self, name, age, gender):
         self.name = name
         self.age = age
         self.gender = gender
-
-    def get_details(self):
-        print(self.name, self.age, self.gender)
+        self._id = 5000
+        self.__id = 123
 
     def __str__(self):
         return f"{self.name} - {self.age}"
 
+    def get_details(self):
+        print(self.name, self.age, self.gender)
 
-person1 = Person("Henry", 18)
-print(person1)  # Henry - 18
+
+person1 = Person("Henry", 15, "Male")
+print(person1._id)
+# print(person1.__id) AttributeError: 'Person' object has no attribute '__id'
