@@ -177,3 +177,14 @@ print(emp1.get_details())
 
 
 # * polymorhism   => parent'tan gelen yapı ihtiyacımızı tam karşılamıyorsa update edebilmemiz.
+
+
+#! inner class
+
+
+class Article(models.Model):
+    name = models.CharField(max_length=50)
+    author = models.CharField(max_length=50)
+
+    class Meta:
+        ordering = ["name"]
