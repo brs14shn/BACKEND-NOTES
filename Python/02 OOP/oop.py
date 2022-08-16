@@ -54,8 +54,29 @@ class Person:
     def test(self):
         print("test")
 
+    def set_details(self, name, age):
+        self.name = name
+        self.age = age
+
+    def get_details(self):
+        print(self.name, self.age)
+
 
 person1 = Person()
 
 person1.test()
 # Person.test(person1)  python arkada bu şekle dönüştürüyor ve o yüzden üstteki çalışmıyor.(arguman gönderdin diyor) def tanımlamasına self ekleyerek sorunu çözebiliriz.
+
+person1.set_details("Ahmet", 32)
+person1.get_details()
+
+# ? static methods
+#! instance göre değişmeten self olmazlar
+
+
+@staticmethod
+def salute():
+    print("Static method")
+
+
+# ? dinamic methods
