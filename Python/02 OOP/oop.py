@@ -162,4 +162,18 @@ class Person:
         return f"{self.name} - {self.age}"
 
     def get_details(self):
-        print(self.name, self.age, self.gender)
+        return self.name, self.age, self.gender, self.path
+
+
+class Employee(Person):
+    def __init__(self, name, age, gender, path):
+        super().__init__(name, age, gender)
+        self.path = path
+
+
+emp1 = Employee("vixctor", 23, "Male", "Developer")
+
+print(emp1.get_details())
+
+
+# * polymorhism   => parent'tan gelen yapı ihtiyacımızı tam karşılamıyorsa update edebilmemiz.
