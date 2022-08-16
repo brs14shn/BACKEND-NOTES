@@ -82,6 +82,24 @@
 # ? special methods (__init__,str)
 
 #! ============İNİT===========================
+# class Person:
+#     company: "Clarusway"
+
+#     def __init__(self, name, age=34, gender="Male"):
+#         self.name = name
+#         self.age = age
+#         self.gender = gender
+
+#     def get_details(self):
+#         print(self.name, self.age, self.gender)
+
+
+# person1 = Person("Henry", 18)
+# # person1.get_details()
+# print(person1)  # <__main__.Person object at 0x7f8f113a6040>
+
+
+#! ============STR===========================
 class Person:
     company: "Clarusway"
 
@@ -93,9 +111,9 @@ class Person:
     def get_details(self):
         print(self.name, self.age, self.gender)
 
+    def __str__(self):
+        return f"{self.name} - {self.age}"
+
 
 person1 = Person("Henry", 18)
-person1.get_details()
-
-
-#! ============STR===========================
+print(person1)  # Henry - 18
