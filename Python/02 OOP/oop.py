@@ -120,6 +120,36 @@
 # print(person1)  # Henry - 18
 
 
+# class Person:
+#     company = "Clarusway"
+
+#     def __init__(self, name, age, gender):
+#         self.name = name
+#         self.age = age
+#         self.gender = gender
+#         self._id = 5000
+#         self.__id = 123
+
+#     def __str__(self):
+#         return f"{self.name} - {self.age}"
+
+#     def get_details(self):
+#         print(self.name, self.age, self.gender)
+
+
+# person1 = Person("Henry", 15, "Male")
+# print(person1._id)
+# # print(person1.__id) AttributeError: 'Person' object has no attribute '__id'
+# print(person1._Person__id)
+
+
+# liste = [2, 4, 5, 3, 1]
+
+# liste.sort()
+
+# ? İNHERİTANCE AND POLYMORPHİSM
+
+
 class Person:
     company = "Clarusway"
 
@@ -127,22 +157,9 @@ class Person:
         self.name = name
         self.age = age
         self.gender = gender
-        self._id = 5000
-        self.__id = 123
 
     def __str__(self):
         return f"{self.name} - {self.age}"
 
     def get_details(self):
         print(self.name, self.age, self.gender)
-
-
-person1 = Person("Henry", 15, "Male")
-print(person1._id)
-# print(person1.__id) AttributeError: 'Person' object has no attribute '__id'
-print(person1._Person__id)
-
-
-liste = [2, 4, 5, 3, 1]
-
-liste.sort()
