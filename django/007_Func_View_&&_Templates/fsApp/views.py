@@ -5,5 +5,7 @@ from django.http import HttpResponse
 
 
 def home(request):
-    html = "<html><body>Hello World!</body></html>"
+    print(request.user)
+    {{request.user}}
+    html = "<h1 style='text-align:center'><body>Hello World!</body></h1>"
     return HttpResponse(html)
