@@ -67,7 +67,7 @@ django-admin startproject main .
 
  shell çıkmak için ** exit() ** komutu çalıştırılır.
 
- # modelle resim eklemek istiyorsak
+ # IMAGE FİELD
   1- İnstall python -m pip install Pillow 
   2- main >> settings.py >> MEDİA_URL="upload_to verilen ismi ekle"
   3- main >>urls.py file içerisine 👇

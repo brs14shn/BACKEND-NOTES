@@ -45,8 +45,8 @@ SECRET_KEY = config('SECRET_KEY')
 go to terminal
 ​
 ```bash
-py manage.py migrate
-py manage.py runserver
+python manage.py migrate
+python manage.py runserver
 ```
 ​
 click the link with CTRL key pressed in the terminal and see django rocket.
@@ -54,7 +54,7 @@ click the link with CTRL key pressed in the terminal and see django rocket.
 go to terminal, stop project, add app
 ​
 ```
-py manage.py startapp student
+python manage.py startapp student
 ```
 ​
 go to settings.py and add 'student' app to installed apps and add below lines
@@ -84,4 +84,13 @@ class Student(models.Model):
 ​
 ```
 ​
-go to terminal
+```
+# IMAGE FİELD
+  1- İnstall python -m pip install Pillow 
+  2- main >> settings.py >> MEDİA_URL="upload_to verilen ismi ekle"
+  3- main >>urls.py file içerisine 👇
+  # View Static/Media Files:
+    from django.conf import settings
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) komut eklenir.
+```
