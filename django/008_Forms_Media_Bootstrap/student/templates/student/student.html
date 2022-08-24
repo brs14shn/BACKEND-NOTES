@@ -1,5 +1,5 @@
 {% extends "student/base.html" %} {% block container %}
-<form action="" method="POST">
+<form action="" method="post" enctype="multipart/form-data">
   {% csrf_token %} {{form.as_p}}
   <input type="submit" value="OK" />
   {% comment %} <label for="">student name</label>
