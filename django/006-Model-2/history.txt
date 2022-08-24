@@ -1,0 +1,16 @@
+ 1241   python manage.py createsuperuser
+ 1242  source /Users/barissahin/Desktop/006-Model-2/env/bin/activate
+ 1243   python manage.py createsuperuser
+ 1244  python manage.py runserver
+ 1245  python manage.py runserver
+ 1246  python manage.py makemigrations
+ 1247  python manage.py migrate
+ 1248  python manage.py runserver
+ 1249   python manage.py shell
+ 1250  python manage.py runserver
+ 1251  python manage.py makemigrations
+ 1252  python -m pip install Pillow
+ 1253  python manage.py makemigrations
+ 1254  python manage.py migrate
+ 1255  python manage.py runserver
+ 1256  pip freeze > requirements.txt
