@@ -1,15 +1,13 @@
 <h1>Registration page</h1>
 
-<form action="{% url 'register' %}" method="post">
+<form action="" method="post">
 
     {% csrf_token %}
     
-    {% if form.errors %}
-        <p>There is something wrong what you entered!</p>
-    {% endif %}
+    
 
     {{ form.as_p }}
-    {# as_p orders the scene #}
+   
 
     <input type="submit" value="Register">
 
