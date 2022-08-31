@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    {% if user.is_authenticated %} 
+        <h1>
+            Hello {{user.username | title}}    
+        </h1>
+        
+        {% comment %}
+        <a href="{% url 'logout' %}">Logout</a>
+        {% endcomment %}
+            
+        
+    {% else %}
+        <h1>Hello, please login to see the page.</h1>
+        
+        {% comment %}
+        <a href="{% url 'login' %}">Login</a> 
+        {% endcomment %}
+            
+        
+    {% endif %}
+        
+    
+</body>
+</html>
