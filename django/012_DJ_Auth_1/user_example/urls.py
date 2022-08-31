@@ -6,5 +6,5 @@ from .views import (
 
 urlpatterns = [
     path('', home, name="home"),
-    path('special', special, name="special"),
+    path('special/', special, name="special"),
 ]
