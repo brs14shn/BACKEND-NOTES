@@ -1,0 +1,9 @@
+{% extends 'users/base.html' %} {% block content %}
+<h1>Home Page</h1>
+
+
+{% if request.user.is_authenticated %}
+<h2>Wellcome {{request.user}}!</h2>
+{% else %}
+<h2>Wellcome Guest!</h2>
+{% endif %} {% endblock content %}
