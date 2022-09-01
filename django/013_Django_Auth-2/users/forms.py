@@ -8,12 +8,12 @@ from django.contrib.auth.forms import UserCreationForm
 
 class UserForm(UserCreationForm):
     class Meta:
-        model=user #user ı kullan ve sadece username ve email aldık
+        model=User #user ı kullan ve sadece username ve email aldık
         fields=('username', 'email')
 
 class UserProfileForm(forms.ModelForm):   #burada hazır modelden form ürettik
     class Meta:
-        model = UsersProfile
+        model = UserProfile
         exclude = ('user',)    #tek elemanlı tupple kullandığımız için sonuna , koyduk
-        #! user haricindeki diğer fieldsları getir
+        #! 👆 user haricindeki diğer fieldsları getir
 
