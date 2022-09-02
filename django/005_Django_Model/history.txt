@@ -1,0 +1,16 @@
+ 1060  source env/bin/activate
+ 1061  pip freeze
+ 1062  pip install django
+ 1063  python3 -m pip install --upgrade pip
+ 1064  pip freeze
+ 1065  pip freeze >> requirements.txt
+ 1066  django-admin
+ 1067  django-admin startproject main .
+ 1068  django-admin
+ 1069  pip freeze
+ 1070  django-admin startproject main .
+ 1071  python manage.py runserver 
+ 1072  python3 manage.py startapp firstApp
+ 1073  python manage.py runserver 
+ 1074  python manage.py migrate
+ 1075  history >> history.txt
