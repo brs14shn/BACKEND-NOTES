@@ -1,0 +1,15 @@
+{% extends 'todo/base.html' %}
+
+
+{% block content %}
+
+<h2>Todo Delete</h2>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    Are you sure for delete {{todo}} !
+    <input type="submit" value="delete">
+</form>
+    
+{% endblock content %}
+    
