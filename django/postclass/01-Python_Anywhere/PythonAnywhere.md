@@ -5,15 +5,18 @@ Python anywherede django dosyasını deploy etmek için aşağıda belirtilen a�
 
 1-Python anywhere sayfasından hesap oluşturma işlemlerini yapıyoruz.Bir adet uygulama oluşturmamıza izin veriyor.Ücretsiz sürüm üzerinden devam ediyoruz.
 
+**[Python anywhere gitmek için tıklayınız!!!](https://www.pythonanywhere.com/login/)**
+
 2-Localde yaptığımız projeyi github push işlemini yapıyoruz.
 
-3-Python anywhere > dashboard sayfasından console $bash açıyoruz.
+3-Python anywhere > dashboard sayfasından new console $bash açıyoruz.
 
 ![](https://cdn-images-1.medium.com/max/1600/1%2AR33UyBBExRijmTvjIsnJZA.png)
 
-4- $bash sayfasından sırasıyla,
 
-```py
+4- $bash sayfasında sırasıyla,
+
+```python
 git clone (github project name)
 cd projename
 python -m venv env # enviroment ortamı oluşturuyoruz.
@@ -27,7 +30,7 @@ python manage.py migrate
 ```
 ![](https://cdn-images-1.medium.com/max/1600/1%2AaHGYfXJmwql46L3-5MHV3g.png)
 
-5- Python anywhere>web sekmesinden **Add a new web app** tıklayarak açılan pencereden *manual>ptyhon (son sürüm) seçilir.
+5- Python anywhere>web sekmesinden <h3 style="color:#20A0D7;font-weight:900;display:inline">Add a new web app</h3> tıklayarak açılan pencereden  <span style="color:#20A0D7;font-weight:900">manual>ptyhon (son sürüm)</span>seçilir.
 
 6-$bash üzerinden;
 
@@ -37,7 +40,7 @@ pwd # komut ile dosya yolu bulunur.
 7- Dosya yolu ;python anywhere >web sayfasının
  - Source code
  - Working directory
- - Virtual env bölümlerine yapıştırılır.
+ - Virtual env bölümlerine yapıştırılır.dosya yolu/env
 ![](https://cdn-images-1.medium.com/max/1600/1%2ApWeVJMgYo34_OBBtBcfVNA.png)
 ![](https://cdn-images-1.medium.com/max/1600/1%2AeOEa98ro5Z6hGacbLfMGEg.png)
  - WSGİ configurasyon kısmına tıklanarak;
@@ -70,10 +73,11 @@ application = get_wsgi_application()
 DEBUG="True"
 ALLOWED_HOSTS = ['*']
 ```
-
+Bunu hatayı alanlar ise 👇; 
 ![](https://cdn-images-1.medium.com/max/1600/1%2Ao_GnRfxP7Ci-pcH6eYG7Qw.png)
 
 ```py
 rm -rf *
  # komutu ile yapılan işlemleri sıfırlayarak yeniden aynı komutları denemeleri gerekmektedir.
 ```
+
