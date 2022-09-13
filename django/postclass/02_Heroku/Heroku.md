@@ -64,5 +64,50 @@ settings.py da en alt kısıma aşağıdaki kodu yazıyoruz,
 - Bu aşamaya kadar olan projedeki değişiklikleri Github repomuza push ediyoruz.
 
 <span style="color:red;font-size:1.5rem" >(8).adım: </span><br>
+Login işlemlerinden sonra;
 Şimdi [heroku sayfasına gidiyoruz](https://dashboard.heroku.com/apps). <br>
 <p> <img src="./images/heroku_dashboard.png"/></p>
+
+<span style="color:red;font-size:1.5rem" >(9).adım: </span><br>
+Heroku’da login olduktan sonra ana sayfada new/Create new app ile ilerliyoruz,
+Unique bir appname oluşturuyoruz. <br><br>
+<p> <img src="./images/create_app.png"/></p>
+<br><br>
+<p> <img src="./images/create_app2.png"/></p>
+
+Projemize isim verdikten sonra create app ile devam ediyoruz, üç adet deploy methodu ile devam edilebilmektedir. Github seçtikten sonra heroku ile github arasından bağlantı kuruluyor, Github hesabınızdan heroku için onay veriyoruz.
+
+
+<span style="color:red;font-size:1.5rem" >10.adım: </span><br>
+## Config Vars
+
+Ancak githubla bağlantı kurmadan önce  env dosyası gitignore edildiğinden içerisindeki SECRET_KEY mevcut değil.Herokuda verileri github üzerinden çekeceğinden .env file dosyasını okuyamayacak.
+
+
+//Config Vars
+Settings tıklayarak Reveal Config Vars sekmesine geliyoruz.
+
+Config Vars içerisinde SECRET_KEY yazıyoruz.Ana dosyamızdaki secret key ile aynı olmak zorunda değildir.
+<p> <img src="./images/config_vars.png"/></p>
+<p> <img src="./images/config_vars2.png"/></p>
+<br><br>
+
+//github authorize
+Şimdi github ile bağlantı kuruyoruz.Heroku ile github authorize işlemi yapılmadıysa yapıyoruz.İlgili projemizi seçiyoruz.
+
+<span style="color:red;font-size:1.5rem" >11.adım: </span><br>
+
+## deploy branch
+Heroku ile Github arasında bağlantı kurulduktan sonra sayfanın alt kısmında github reposundan ilgili proenizi ismi ile arayıp buluyoruz. Projeyi deploy edeceğiniz branch seçiyoruz ve deploy branch butonu ile projeyi herokuya gönderiyoruz.
+<p> <img src="./images/deploy_branch.png"/></p>
+
+<span style="color:red;font-size:1.5rem" >12.adım: </span><br>
+# run console
+Bu aşamda projenin build işlemini hatasız olarak tamamlıyoruz, artık projemiz canlıda, son bir işlemimiz kalıyor;
+
+django models.py da bulanan tablolarımızı yeni databasemize kayıt etmemiz gerekiyor bu işlem yapılmazsa proje çalışmayacaktır
+
+run console ile python manage.py migrate komutunu çalıştırıyoruz. Artık models.py da ki tablolarınız yeni database kayıt edildi.
+
+<p> <img src="./images/run_console.png"/></p>
+ Django uygulamanızı heroku ya başarılı bir şekilde deploy ettik…
