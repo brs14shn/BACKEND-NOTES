@@ -22,7 +22,7 @@ class ProductAdmin(admin.ModelAdmin):
 
      prepopulated_fields = {'slug': ('name',)}
      list_per_page = 25
-     
+
      date_hierarchy = "update_date"
      # fields = (('name', 'slug'), 'description', "is_in_stock")
      #* fields kullanılırsa fieldset kullanma 👇
@@ -46,6 +46,7 @@ class ProductAdmin(admin.ModelAdmin):
         count = queryset.update(is_in_stock=True)
         self.message_user(request, f"{count} products added to stock.")
      is_in_stock.short_description = 'add to stock'
+     
 
      def is_out_stock(self, request, queryset):
         count = queryset.update(is_in_stock=True)
