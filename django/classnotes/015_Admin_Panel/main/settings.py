@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-     "products"
+     "products",
+     'ckeditor',
+
 ]
 
 MIDDLEWARE = [
@@ -125,3 +127,11 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CKEDITOR_CONFIGS = {
+        'default' : {
+            'toolbar' : 'full',
+            'height' : 700,
+            'width' : 1000
+        }
+    }
