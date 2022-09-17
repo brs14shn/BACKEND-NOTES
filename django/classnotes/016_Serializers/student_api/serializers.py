@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Student
+from .models import Student,Path
 
 class StudentSerializer(serializers.Serializer):
     first_name = serializers.CharField(max_length=30)
@@ -17,14 +17,40 @@ class StudentSerializer(serializers.Serializer):
         return instance
 
 #* =====================MODEL SERİALİZER========================
+
+
 class StudentSerializer(serializers.ModelSerializer):
-    full_name=serializers.SerializerMethodField()
+    #full_name=serializers.SerializerMethodField()
 
     def get_full_name(self,obj):
         return f"{obj.first_name} {obj.last_name}"
+
+    path=serializers.StringRelatedField()
+    path_id=serializers.IntegerField()
     class Meta:
         model= Student
-        fields = ['id',"full_name" ,'first_name', 'last_name', 'number']
+        fields = ['id',"path_id","path" ,'first_name', 'last_name', 'number']
         #fields = '__all__'
         # exclude = ['id'] / ('id',) list veya tuple olarak yazılabilir.
         # 
+    def validate_number(self, value):
+
+        if value > 200:
+            raise serializers.ValidationError("Student number can not be greater than 2000!")  
+        return value
+
+    def validate_first_name(self, value):
+        
+        if value.lower() == 'barıs':
+            raise serializers.ValidationError("Rafe can not be our student!")
+        return value  
+
+
+
+
+class PathSerializer(serializers.ModelSerializer):
+    #students = serializers.PrimaryKeyRelatedField(read_only=True, many=True)
+    class Meta:
+        model = Path
+        fields = ['id',"path_name"]
+        #fields = '__all__'  
