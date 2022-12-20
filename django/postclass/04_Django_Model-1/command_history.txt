@@ -1,0 +1,10 @@
+ 1006  env/bin/activate
+ 1007  source env/bin/activate
+ 1008  pip install django
+ 1009  pip freeze
+ 1010  pip freeze > requirements.txt
+ 1011  django-admin startproject main .
+ 1012  pip install python-decouple
+ 1013  pip freeze > requirements.txt
+ 1014  pip install --upgrade pip
+ 1015  history | tail -n 10
